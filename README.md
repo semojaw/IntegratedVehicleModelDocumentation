@@ -105,7 +105,7 @@ The ABS algorithm is currently under research and development and is not yet fin
 ## SUSPENSION GEOMETRY FUNCTIONS
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/susWheelRack.png" width="33%">
+  <img src="IntegratedVehicleModelImages/susWheelRack.png" width="45%">
 </p>
 
 The suspension geometry module allows suspension and steering hard points to be defined in two ways:
@@ -138,7 +138,7 @@ The instantaneous positions of the roll center and pitch center are also calcula
 The suspension is modeled using linear springs and dampers.
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/sevenDOF.png" width="33%">
+  <img src="IntegratedVehicleModelImages/sevenDOF.png" width="50%">
 </p>
 
 The vehicle dynamics model includes:

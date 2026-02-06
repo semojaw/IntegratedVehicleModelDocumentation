@@ -4,14 +4,14 @@ The Integrated Vehicle Model is a vehicle simulation framework that integrates s
 
 The accuracy and capacity of the overall model depend on which subsystems and features are enabled. Optional effects include aerodynamic forces, road surface influence, and rolling resistance.
 
----
+This model is built in **MATLAB**.
 
 ## GENERAL CONFIGURATION
 
 The model is designed to be highly configurable. The user can control:
 
-- Total simulation time  (t_f)
-- Simulation time step  (dt)
+- Total simulation time 
+- Simulation time step 
 - Data storage rate for variables  
 - Modification of model parameters  
 - Input signals, reference values, and driving scenarios  
@@ -19,8 +19,6 @@ The model is designed to be highly configurable. The user can control:
 - Initial conditions  
 
 This allows the same model structure to be used for different studies, ranging from simple functional tests to more detailed simulations.
-
----
 
 ## LOGIC SWITCHES
 
@@ -35,13 +33,9 @@ The following subsystems and features can be individually switched on or off:
 - Road surface function  
 - ABS algorithm  
 
----
-
 ## DRIVING MODEL
 
 The driving model is currently under research and development and is not yet finalized.
-
----
 
 ## STEERING MODEL
 
@@ -73,8 +67,6 @@ The steering model operates in two modes depending on whether the suspension geo
 - A constant mechanical advantage is assumed  
 - Perfect Ackermann steering angles are assumed  
 
----
-
 ## BRAKING MODEL
 
 <p align="center">
@@ -103,16 +95,12 @@ Main features of the braking model include:
 <p align="center">
   <img src="IntegratedVehicleModelImages/frictionMap.PNG" width="30%">
   <img src="IntegratedVehicleModelImages/fluidNChamber.png" width="25%">
-  <img src="IntegratedVehicleModelImages/laminarPipe.png" width="25%">
+  <img src="IntegratedVehicleModelImages/laminarPipe.png" width="20%">
 </p>
-
----
 
 ## ABS ALGORITHM
 
 The ABS algorithm is currently under research and development and is not yet finalized.
-
----
 
 ## SUSPENSION GEOMETRY FUNCTIONS
 
@@ -144,8 +132,6 @@ The following values are calculated instantaneously:
 </p>
 
 The instantaneous positions of the roll center and pitch center are also calculated and passed to the vehicle body dynamics calculations.
-
----
 
 ## VEHICLE BODY DYNAMICS
 
@@ -184,8 +170,6 @@ The following effects are calculated:
   The model uses simplified linear spring and damper forces proportional to wheel vertical motion relative to the body
   (vertical, roll, and pitch).
 
----
-
 ## TIRE MODEL
 
 The tire forces are calculated using a **Pacejka tire model**.
@@ -206,8 +190,6 @@ The tire forces are calculated using a **Pacejka tire model**.
 **Limitations**
 
 - Tire behavior is limited to the Pacejka formulation used and does not include transient or thermal tire effects.
-
----
 
 ## MODEL SCOPE AND INTENDED USE
 

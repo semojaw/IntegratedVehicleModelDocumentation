@@ -52,7 +52,7 @@ The driving model is currently under research and development and is not yet fin
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/steeringModel.PNG" width="33%"><br>
-  <em>Steer-by-wire model architecture</em>
+  <em>Steer-by-wire model figure</em>
 </p>
 
 The steering system is modeled as a DC motor driving the steering rack, controlled using a PID controller. The PID coefficients are mapped as a function of the vehicle longitudinal speed.
@@ -83,7 +83,7 @@ The steering model operates in two modes depending on whether the suspension geo
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/BrakingModel.PNG" width="50%"><br>
-  <em>Brake-by-wire model architecture [1]</em>
+  <em>Brake-by-wire model figure[1]</em>
 </p>
 
 Main features of the braking model include:
@@ -155,7 +155,7 @@ The suspension is modeled using linear springs and dampers.
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/sevenDOF.png" width="50%"><br>
-  <em>Seven-degree-of-freedom vehicle dynamics model [4]</em>
+  <em>Seven-degree-of-freedom vehicle dynamics model figure [4]</em>
 </p>
 
 The vehicle dynamics model includes:
@@ -178,7 +178,7 @@ The following effects are calculated:
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/rollModel.png" width="33%"><br>
-  <em>Roll model with roll axis moment balance [5]</em>
+  <em>Roll model with roll axis moment balance figure [5]</em>
 </p>
 
 **Limitations**
@@ -217,7 +217,7 @@ The model focuses on capturing the interaction between steering, braking, suspen
 ## Other Repository Attachments
 - `MainScript* .html` – Main simulation Live scripts converted to HTML with example outputs in different scenarios and configurations. Unfortunately, the plots in HTML are not viewed in Github, so download the HTML file and open it outside Github to review them.
 
-## Images sources and used references
+## Figures sources and some used references
 - [1] Paper: Adaptive-robust friction compensation in a hybrid brake-by-wire actuator (DOI: 10.1177/0959651813507562)
 - [2] Georg Rill, Abel Arrieta Castro - Road Vehicle Dynamics: Fundamentals and Modeling with MATLAB
 - [3] Paper: A New Method to Evaluate Bump Steer and Steering Influence on Kinematic Roll and Pitch Axes for All Independent Suspension Types.(SAE Technical Paper)

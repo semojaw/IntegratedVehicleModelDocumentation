@@ -6,6 +6,17 @@ The accuracy and capacity of the overall model depend on which subsystems and fe
 
 This model is built in **MATLAB**.
 
+##  Supervision and contributions
+
+This project is conducted as an independent research effort under the supervision of:
+
+**Dr. Diaa Abidou**  
+Assistant Professor, Department of Automotive Engineering, Faculty of Engineering, Ain Shams University
+### Major contributers
+- Eng. Assem Elgohary (https://github.com/semojaw)
+- Eng. Ahmed Helmy (https://github.com/AAhmedHelmy)
+- Eng. Mohamed Faisal
+
 ## GENERAL CONFIGURATION
 
 The model is designed to be highly configurable. The user can control:
@@ -40,7 +51,8 @@ The driving model is currently under research and development and is not yet fin
 ## STEERING MODEL
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/steeringModel.PNG" width="33%">
+  <img src="IntegratedVehicleModelImages/steeringModel.PNG" width="33%"><br>
+  <em>Steer-by-wire model architecture</em>
 </p>
 
 The steering system is modeled as a DC motor driving the steering rack, controlled using a PID controller. The PID coefficients are mapped as a function of the vehicle longitudinal speed.
@@ -58,7 +70,7 @@ The steering model operates in two modes depending on whether the suspension geo
 <p align="center">
   <img src="IntegratedVehicleModelImages/wheelForcesRack.PNG" width="33%">
   <img src="IntegratedVehicleModelImages/wheelForcesRackEquation.PNG" width="33%"><br>
-  <em>Forces transferred from wheel to the rack</em>
+  <em>Forces and moments transferred from the wheel contact patch to the steering rack</em>
 </p>
 
 ### When suspension geometry effects are not activated:
@@ -70,7 +82,8 @@ The steering model operates in two modes depending on whether the suspension geo
 ## BRAKING MODEL
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/BrakingModel.PNG" width="50%">
+  <img src="IntegratedVehicleModelImages/BrakingModel.PNG" width="50%"><br>
+  <em>Brake-by-wire model architecture</em>
 </p>
 
 Main features of the braking model include:
@@ -95,7 +108,8 @@ Main features of the braking model include:
 <p align="center">
   <img src="IntegratedVehicleModelImages/frictionMap.PNG" width="30%">
   <img src="IntegratedVehicleModelImages/fluidNChamber.png" width="25%">
-  <img src="IntegratedVehicleModelImages/laminarPipe.png" width="20%">
+  <img src="IntegratedVehicleModelImages/laminarPipe.png" width="20%"><br>
+  <em>(a) Friction model map. (b) Equation of mass conservation of a compressible fluid in a chamber. (c) Equation of Laminar flow rate in a conduit.</em>
 </p>
 
 ## ABS ALGORITHM
@@ -105,7 +119,8 @@ The ABS algorithm is currently under research and development and is not yet fin
 ## SUSPENSION GEOMETRY FUNCTIONS
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/susWheelRack.png" width="45%">
+  <img src="IntegratedVehicleModelImages/susWheelRack.png" width="45%"><br>
+  <em>Suspension and steering kinematic model figure</em>
 </p>
 
 The suspension geometry module allows suspension and steering hard points to be defined in two ways:
@@ -128,7 +143,8 @@ The following values are calculated instantaneously:
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/RollDefinition.png" width="33%">
-  <img src="IntegratedVehicleModelImages/pitchDefinition.png" width="33%">
+  <img src="IntegratedVehicleModelImages/pitchDefinition.png" width="33%"><br>
+  <em>Definitions of roll and pitch centers in 3D</em>
 </p>
 
 The instantaneous positions of the roll center and pitch center are also calculated and passed to the vehicle body dynamics calculations.
@@ -138,7 +154,8 @@ The instantaneous positions of the roll center and pitch center are also calcula
 The suspension is modeled using linear springs and dampers.
 
 <p align="center">
-  <img src="IntegratedVehicleModelImages/sevenDOF.png" width="50%">
+  <img src="IntegratedVehicleModelImages/sevenDOF.png" width="50%"><br>
+  <em>Seven-degree-of-freedom vehicle dynamics model</em>
 </p>
 
 The vehicle dynamics model includes:
@@ -161,14 +178,14 @@ The following effects are calculated:
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/rollModel.png" width="33%"><br>
-  <em>Roll model</em>
+  <em>Roll model with roll axis moment balance</em>
 </p>
 
 **Limitations**
 
 - Forces in suspension links are not considered, nor are actual spring and damper forces and their true directions of action.  
   The model uses simplified linear spring and damper forces proportional to wheel vertical motion relative to the body
-  (vertical, roll, and pitch).
+  (vertical, roll, and pitch) motion.
 
 ## TIRE MODEL
 
@@ -196,3 +213,9 @@ The tire forces are calculated using a **Pacejka tire model**.
 This model is intended for engineering analysis, controller development, and system-level studies of vehicle behavior. It is designed to allow controlled comparison between simplified and more detailed modeling approaches by enabling or disabling specific subsystems and physical effects.
 
 The model focuses on capturing the interaction between steering, braking, suspension geometry, tires, and vehicle body motions within a computationally manageable framework. It is not intended to replace high-fidelity commercial vehicle simulation tools at this stage.
+
+## Other Repository Attachments
+- `MainScript* .html` – Main simulation Live scripts converted to HTML with example outputs in different scenarios and configurations. Unfortunately, the plots in HTML are not viewed in Github, so download the HTML file and open it outside Github to review them.
+
+## Images Sources
+- Paper: Adaptive-robust friction compensation in a hybrid brake-by-wire actuator (DOI: 10.1177/0959651813507562)

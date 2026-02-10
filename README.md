@@ -70,7 +70,7 @@ The steering model operates in two modes depending on whether the suspension geo
 <p align="center">
   <img src="IntegratedVehicleModelImages/wheelForcesRack.PNG" width="33%">
   <img src="IntegratedVehicleModelImages/wheelForcesRackEquation.PNG" width="33%"><br>
-  <em>Forces and moments transferred from the wheel contact patch to the steering rack</em>
+  <em>Forces and moments transferred from the wheel contact patch to the steering rack [2]</em>
 </p>
 
 ### When suspension geometry effects are not activated:
@@ -83,7 +83,7 @@ The steering model operates in two modes depending on whether the suspension geo
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/BrakingModel.PNG" width="50%"><br>
-  <em>Brake-by-wire model architecture</em>
+  <em>Brake-by-wire model architecture [1]</em>
 </p>
 
 Main features of the braking model include:
@@ -109,7 +109,7 @@ Main features of the braking model include:
   <img src="IntegratedVehicleModelImages/frictionMap.PNG" width="30%">
   <img src="IntegratedVehicleModelImages/fluidNChamber.png" width="25%">
   <img src="IntegratedVehicleModelImages/laminarPipe.png" width="20%"><br>
-  <em>(a) Friction model map. (b) Equation of mass conservation of a compressible fluid in a chamber. (c) Equation of Laminar flow rate in a conduit.</em>
+  <em>(a) Friction model map [1]. (b) Equation of mass conservation of a compressible fluid in a chamber. (c) Equation of Laminar flow rate in a conduit.</em>
 </p>
 
 ## ABS ALGORITHM
@@ -120,7 +120,7 @@ The ABS algorithm is currently under research and development and is not yet fin
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/susWheelRack.png" width="45%"><br>
-  <em>Suspension and steering kinematic model figure</em>
+  <em>Suspension and steering kinematic model figure [2]</em>
 </p>
 
 The suspension geometry module allows suspension and steering hard points to be defined in two ways:
@@ -144,7 +144,7 @@ The following values are calculated instantaneously:
 <p align="center">
   <img src="IntegratedVehicleModelImages/RollDefinition.png" width="33%">
   <img src="IntegratedVehicleModelImages/pitchDefinition.png" width="33%"><br>
-  <em>Definitions of roll and pitch centers in 3D</em>
+  <em>Definitions of roll and pitch centers in 3D [3]</em>
 </p>
 
 The instantaneous positions of the roll center and pitch center are also calculated and passed to the vehicle body dynamics calculations.
@@ -155,7 +155,7 @@ The suspension is modeled using linear springs and dampers.
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/sevenDOF.png" width="50%"><br>
-  <em>Seven-degree-of-freedom vehicle dynamics model</em>
+  <em>Seven-degree-of-freedom vehicle dynamics model [4]</em>
 </p>
 
 The vehicle dynamics model includes:
@@ -178,7 +178,7 @@ The following effects are calculated:
 
 <p align="center">
   <img src="IntegratedVehicleModelImages/rollModel.png" width="33%"><br>
-  <em>Roll model with roll axis moment balance</em>
+  <em>Roll model with roll axis moment balance [5]</em>
 </p>
 
 **Limitations**
@@ -217,5 +217,10 @@ The model focuses on capturing the interaction between steering, braking, suspen
 ## Other Repository Attachments
 - `MainScript* .html` – Main simulation Live scripts converted to HTML with example outputs in different scenarios and configurations. Unfortunately, the plots in HTML are not viewed in Github, so download the HTML file and open it outside Github to review them.
 
-## Images Sources
-- Paper: Adaptive-robust friction compensation in a hybrid brake-by-wire actuator (DOI: 10.1177/0959651813507562)
+## Images sources and used references
+- [1] Paper: Adaptive-robust friction compensation in a hybrid brake-by-wire actuator (DOI: 10.1177/0959651813507562)
+- [2] Georg Rill, Abel Arrieta Castro - Road Vehicle Dynamics: Fundamentals and Modeling with MATLAB
+- [3] Paper: A New Method to Evaluate Bump Steer and Steering Influence on Kinematic Roll and Pitch Axes for All Independent Suspension Types.(SAE Technical Paper)
+- [4] Wuwei Chen, Hansong Xiao, Qidong Wang, Linfeng Zhao, Maofei Zhu - Integrated Vehicle Dynamics and Control
+- [5] Thomas D. Gillespie - Fundamentals of Vehicle Dynamics
+- [6] Hans Pacejka - Tyre and Vehicle Dynamics
